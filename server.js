@@ -10,11 +10,11 @@ const app = express();
 
 // --- Configuration ---
 app.use(cors({
-    origin: "https://baddies-boutique.vercel.app/", 
+    origin: "*", 
     methods: ["GET", "POST", "DELETE", "PUT"],
 }));
 
-const URI = process.env.URI || "mongodb://localhost:27017/BaddiesBoutique"; 
+const URI = process.env.URI ; 
 
 // Middleware
 app.use(express.json());
